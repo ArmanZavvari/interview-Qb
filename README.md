@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Interview Task
+#### _Questionnaire_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Swagger: (http://rezayari.ir:5050/swagger/index.html)
 
-Currently, two official plugins are available:
+### _Endpoints:_
+- /Auth/Login
+- /Questionnaire/GetQuestionnaire
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### _pages:_
+- login (call login api)
+- questionnaire (call second api and render them)
 
-## Expanding the ESLint configuration
+### _description:_
+First, call the login endpoint using your credentials (username and password) to obtain a token required for accessing protected endpoints.
+Next, call the second endpoint to retrieve an array of questions. Render these questions based on their order and type. Capture user answers and store them in the 'value' property of each choice.
+For example, set boolean values for choices with checkbox types.
+Each choice object includes a 'deleteQuestionIds' property. If a user answers or selects this choice, skip the associated questions and do not render them when navigating to the next button.
+You are provided with an enum that contains the types of questions, located in the 'types' folder.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
