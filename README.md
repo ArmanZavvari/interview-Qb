@@ -12,10 +12,15 @@ Swagger: (http://rezayari.ir:5050/swagger/index.html)
 - questionnaire (call second api and render them)
 
 ### _description:_
-First, call the login endpoint using your credentials (username and password) to obtain a token required for accessing protected endpoints.
-Next, call the second endpoint to retrieve an array of questions. Render these questions based on their order and type. Capture user answers and store them in the 'value' property of each choice.
-For example, set boolean values for choices with checkbox types.
-Each choice object includes a 'deleteQuestionIds' property. If a user answers or selects this choice, skip the associated questions and do not render them when navigating to the next button.
-You are provided with an enum that contains the types of questions, located in the 'types' folder.
+<p>
+  First, call the login endpoint using your credentials (username and password) to obtain a token required for accessing protected endpoints. <br />
+  Next, call the second endpoint to retrieve an array of questions.<br /> Render these questions based on their order and type. Capture user answers and store them in the 'value' property of each choice.<br />
+  For example, set boolean values for choices with checkbox types.<br />
+  Each choice object includes a 'deleteQuestionIds' property. If a user answers or selects this choice, skip the associated questions and do not render them when navigating to the next button.<br />
+  You are provided with an enum that contains the types of questions, located in the 'types' folder.<br />
+</p>
 
 
+
+_example of questionnaire layout:_ <br /><br />
+![Frame 1](https://github.com/QualityBenchmarkers/Interview_01_Fronend/assets/88034000/29e0ea87-61fe-40a5-a192-1ec37294aa27)
