@@ -15,10 +15,6 @@ Swagger: (http://rezayari.ir:5050/swagger/index.html)
 <p>
   First, call the login endpoint using your credentials (username and password) to obtain a token required for accessing protected endpoints. <br />
   Next, call the second endpoint to retrieve an array of questions.<br /> Render these questions based on their order and type. Capture user answers and store them in the 'value' property of each choice.<br />
-  For example, set boolean values for choices with checkbox types.<br />
-  Each choice object includes a 'deleteQuestionIds' property. If a user answers or selects this choice, skip the associated questions and do not render them when navigating to the next button.<br />
-  You are provided with an enum that contains the types of questions, located in the 'types' folder.<br />
-</p>
 
 
 
